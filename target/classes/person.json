@@ -1,0 +1,17 @@
+{
+  "name": "Theresia",
+  "age": 22,
+  "address": {
+    "streetAddress": "Zuckerstraße 22",
+    "city": "Wunderland"
+  },
+  "phoneNumber": [
+    {
+      "type": "mobile",
+      "number": "212-333-1111"
+    },{
+      "type": "fax",
+      "number": "646-444-2222"
+    }
+  ]
+}
