@@ -2,7 +2,7 @@
   "name": "Theresia",
   "age": 22,
   "address": {
-    "streetAddress": "Zuckerstraße 22",
+    "street": "Zuckerstraße 3A",
     "city": "Wunderland"
   },
   "phoneNumber": [
