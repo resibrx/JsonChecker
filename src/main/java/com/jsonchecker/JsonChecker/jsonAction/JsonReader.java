@@ -14,6 +14,7 @@ public class JsonReader {
     JSONObject jsonObject;
 
     public String getJson(String file) {
+
         JSONParser parser = new JSONParser();
 
         try {
@@ -21,7 +22,8 @@ public class JsonReader {
             Object obj = parser.parse(new FileReader(file));
 
             jsonObject = (JSONObject) obj;
-
+            System.out.println(jsonObject.toJSONString());
+            /*
             String name = (String) jsonObject.get("name");
             //System.out.println("Vorname: " + name);
 
@@ -43,7 +45,7 @@ public class JsonReader {
                // System.out.println("Art: " + type);
               //  System.out.println("Nummer: " + number);
             }
-
+            */
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -52,7 +54,7 @@ public class JsonReader {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return jsonObject.toJSONString();
+        return jsonObject.toString();
 
     }
 }
