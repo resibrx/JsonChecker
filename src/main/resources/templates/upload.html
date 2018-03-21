@@ -33,26 +33,28 @@
 
 <div class="container">
 
-    <div class="well" style="background-color:#e6fff9;width:350px;height:150px;  position: absolute; top: 50%;
-                             left: 50%; z-index: 15;   margin: -100px 0 0 -150px;">
-        <div style="
-                width: 25%;
-                height: 100px;
-                float: left;
-                ">
-            <i class="fa fa-cloud-upload" style="font-size:50px;color:black"></i>
-        </div>
-        <div style="
-            margin-left: 29%;
-            height: 200px;
-            ">
+    <div class="well" style="background-color:#e6fff9;width:350px;height:130px;  position: absolute; top: 450px;
+                             left: 580px; margin: -100px 0 0 -150px;">
+
             <form method="POST" action="/upload" enctype="multipart/form-data">
-                <input type="file" name="file" /><br/><br/>
-                <input type="submit" value="Submit" />
+                    <div>
+                        <input type="file" name="file" style="float: left; width: 228px;margin-left:15%"/>
+                    </div>
+                    <div>
+                        <i class="fa fa-trash-o"  style="font-size:24px;color:black; margin-top: -1%"></i>
+                    </div>
+
+                <div style="margin-left: 24%; margin-top: 4%">
+                    <div style="float:left; margin-left: 3%">
+                      <i class="fa fa-cloud-upload" style="font-size:44px;color:black"></i>
+                    </div>
+                    <div>
+                        <input type="submit" value="Hochladen" style="padding: 5px 23px; background: white;border-radius: 7px; margin-top: 3%; margin-left: 7%" />
+                    </div>
+                </div>
             </form>
-        </div>
+
     </div>
-    <i class="fa fa-trash-o" style="font-size:24px;color:black;"></i>
 
     <div style="margin-top: 250px;">
 
