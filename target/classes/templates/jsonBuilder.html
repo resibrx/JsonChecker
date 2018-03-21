@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://github.com/resibrx">JSON-Checker by Theresia</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../">Home</a></li>
+            <li><a href="xmlConverter.html">XML-Converter</a></li>
+            <li><a href="jsonBuilder.html">JSON-Builder</a></li>
+            <li><a href="#">Page 3</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1>JSON-Builder</h1>
+    <p>Create your own JSON!</p>
+</div>
+
+<div>
+
+    <h1>Enter your key and value!</h1>
+    <form action="#" th:action="@{/jsonBuilder}" th:object="${greeting}" method="post">
+        <p>Key: <input type="text" th:field="*{key}" /></p>
+        <p>Value: <input type="text" th:field="*{value}" /></p>
+        <p><input type="submit" value="Convert to JSON" /></p>
+    </form>
+
+</div>
+
+
+<h1>Result</h1>
+<div th:if="${generatedJson}">
+
+    <div class="well">
+        <pre th:text="${generatedJson}"></pre>
+        <a th:attr="download=${downloadFile}">Download</a>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,2 +1,5 @@
-/Users/theresia.bruns/git/projects/JsonChecker/src/main/java/com/jsonChecker/jsonCheckerDemo/StartApplication.java
-/Users/theresia.bruns/git/projects/JsonChecker/src/main/java/com/jsonChecker/jsonCheckerDemo/HelloController.java
+/Users/theresia.bruns/git/projects/JsonChecker/src/main/java/com/jsonchecker/JsonChecker/jsonAction/Greeting.java
+/Users/theresia.bruns/git/projects/JsonChecker/src/main/java/com/jsonchecker/JsonChecker/StartApplication.java
+/Users/theresia.bruns/git/projects/JsonChecker/src/main/java/com/jsonchecker/JsonChecker/exception/GlobalExceptionHandler.java
+/Users/theresia.bruns/git/projects/JsonChecker/src/main/java/com/jsonchecker/JsonChecker/controller/JsonCheckerController.java
+/Users/theresia.bruns/git/projects/JsonChecker/src/main/java/com/jsonchecker/JsonChecker/jsonAction/JsonReader.java
