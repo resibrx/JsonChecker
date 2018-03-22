@@ -1,6 +1,6 @@
 package com.jsonchecker.JsonChecker.jsonAction;
 
-public class Greeting {
+public class JsonInput {
 
     private String key;
     private String value;

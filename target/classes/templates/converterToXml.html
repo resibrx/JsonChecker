@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+        }
+        .one {
+            width: 50%;
+            height: 500px;
+            float: left;
+        }
+        .two {
+            width: 50%;
+            margin-left: 55%;
+            height: 500px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">JSON-Checker by Theresia</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../">JSON-Checker</a></li>
+            <li class="active"><a href="converterToXml.html">XML-Converter</a></li>
+            <li><a href="jsonBuilder.html">JSON-Builder</a></li>
+            <li><a href="#">Page 3</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1>JSON to XML Converter</h1>
+    <p>Convert your JSON file to XML</p>
+</div>
+
+<div class="container">
+
+    <div class="well" style="background-color:#e6fff9;width:350px;height:130px;  position: absolute; top: 450px;
+                             left: 580px; margin: -100px 0 0 -150px;">
+
+        <form method="POST" action="/convert" enctype="multipart/form-data">
+            <div>
+                <input type="file" name="file" style="float: left; width: 228px;margin-left:15%"/>
+            </div>
+            <div>
+                <i class="fa fa-trash-o"  style="font-size:24px;color:black; margin-top: -1%"></i>
+            </div>
+
+            <div style="margin-left: 24%; margin-top: 4%">
+                <div style="float:left; margin-left: 3%">
+                    <i class="fa fa-cloud-upload" style="font-size:44px;color:black"></i>
+                </div>
+                <div>
+                    <input type="submit" value="Convert" style="padding: 5px 23px; background: white;border-radius: 7px; margin-top: 3%; margin-left: 7%" />
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="alert alert-success" th:if="${status}" style="margin-top: 16%">
+        <strong>Success!</strong><div th:text="${status}"></div>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="one">
+
+        <div th:if="${jsonFile}">
+
+            <div class="well">
+                <pre th:text="${jsonFile}"></pre>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="two">
+        <div class="row" th:if="${message}">
+
+            <div class="well">
+                <textarea rows="20" cols="40" style="border:none" th:text="${message}"></textarea>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
