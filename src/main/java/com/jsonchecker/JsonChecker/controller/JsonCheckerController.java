@@ -1,23 +1,14 @@
 package com.jsonchecker.JsonChecker.controller;
 
 import com.google.gson.*;
-import com.jsonchecker.JsonChecker.jsonAction.JsonInput;
 import com.jsonchecker.JsonChecker.jsonAction.JsonReader;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -34,6 +25,7 @@ public class JsonCheckerController {
 
     @GetMapping("/")
     public String home(){
+
         return "jsonChecker";
     }
 

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
     <style>
         .container {
             width: 80%;
@@ -19,14 +21,21 @@
             width: 50%;
             height: 500px;
             float: left;
+            background-color:#e6fff9;
+            border: 1px solid black;
         }
         .two {
             width: 50%;
             margin-left: 55%;
             height: 500px;
         }
-
-
+        .button-type{
+            background: white;
+            border-radius: 7px;
+        }
+        .input-style{
+            width:180px;
+        }
     </style>
 
 </head>
@@ -42,7 +51,6 @@
             <li><a href="../">JSON-Checker</a></li>
             <li><a href="converterToXml.html">XML-Converter</a></li>
             <li class="active"><a href="jsonBuilder.html">JSON-Builder</a></li>
-            <li><a href="#">Page 3</a></li>
         </ul>
     </div>
 </nav>
@@ -55,12 +63,19 @@
 <div class="container">
 <div class="one">
 
-    <div>Enter your key and value!</div><br/>
-    <form action="#" th:action="@{/jsonBuilder}" th:object="${jsonInput}" method="post">
-        <p>Key: <input type="text" th:field="*{key}" class="form-control" /></p>
-        <p>Value: <input type="text" th:field="*{value}" class="form-control" /></p>
-        <th><button type="submit" name="addInput">Add Key-Value</button></th>
-        <p><input type="submit" value="Convert to JSON" /></p>
+    <div style="margin-left: 20px;">Enter your key and value!</div><br/>
+    <form action="#" th:action="@{/jsonBuilder}" th:object="${jsonInput}" method="post" style="margin-left: 20px">
+        <p>Key: <input type="text" th:field="*{key}" class="form-control input-style" /></p>
+        <p>Value: <input type="text" th:field="*{value}" class="form-control input-style" /></p>
+        <div class="input_fields_wrap">
+        </div>
+
+
+
+        <div class="col-sm-12 text-center">
+            <button class="add_field_button button-type">Add More Fields</button>
+            <input type="submit" value="Convert to JSON" class="button-type" />
+        </div>
     </form>
 
 </div>
@@ -76,6 +91,8 @@
         </div>
     </div>
 </div>
+
+
 </div>
 </body>
 </html>

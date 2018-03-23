@@ -10,11 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 10px;
-        }
         .one {
             width: 50%;
             height: 500px;
@@ -41,7 +36,6 @@
             <li><a href="../">JSON-Checker</a></li>
             <li class="active"><a href="converterToXml.html">XML-Converter</a></li>
             <li><a href="jsonBuilder.html">JSON-Builder</a></li>
-            <li><a href="#">Page 3</a></li>
         </ul>
     </div>
 </nav>
@@ -53,8 +47,8 @@
 
 <div class="container">
 
-    <div class="well" style="background-color:#e6fff9;width:350px;height:130px;  position: absolute; top: 450px;
-                             left: 580px; margin: -100px 0 0 -150px;">
+    <div class="well" style="background-color:#e6fff9;width:350px;height:130px;  position: relative;
+                             left: 400px; padding: 10px; border: 1px solid black">
 
         <form method="POST" action="/convert" enctype="multipart/form-data">
             <div>
@@ -76,7 +70,7 @@
 
     </div>
 
-    <div class="alert alert-success" th:if="${status}" style="margin-top: 16%">
+    <div class="alert alert-success" th:if="${status}">
         <strong>Success!</strong><div th:text="${status}"></div>
     </div>
 
@@ -100,7 +94,7 @@
         <div class="row" th:if="${message}">
 
             <div class="well">
-                <textarea rows="20" cols="40" style="border:none" th:text="${message}"></textarea>
+                <textarea rows="20" cols="40" style="border:1px" th:text="${message}"></textarea>
             </div>
 
         </div>

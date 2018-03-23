@@ -1,5 +1,7 @@
+com/jsonchecker/JsonChecker/controller/JsonConverterToXml.class
+com/jsonchecker/JsonChecker/jsonAction/JsonInput.class
+com/jsonchecker/JsonChecker/controller/JsonBuilderController.class
 com/jsonchecker/JsonChecker/controller/JsonCheckerController.class
 com/jsonchecker/JsonChecker/jsonAction/JsonReader.class
-com/jsonchecker/JsonChecker/jsonAction/Greeting.class
 com/jsonchecker/JsonChecker/exception/GlobalExceptionHandler.class
 com/jsonchecker/JsonChecker/StartApplication.class
